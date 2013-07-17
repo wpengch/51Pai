@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* 
+	@name: index.html
+	@description:
+	@author:neikvon@hotmail.com
+*/
+@import url(../public/base.css);
+@import url(../form/form.css);
+@import url(../form/gray-theme.css);
+@import url(../theme/light/main.css);
+@import url(../public/layout.css);
+@import url(../public/typography.css);
+
+.top-banner{border:1px solid #dae3ea;background-color: #fff}
+.anonymous,.logon{text-align: center;}
+.anonymous .anon-title{padding:2em 1em; font-size: 1.2em;color: #fd8c00}
+.anonymous .anon-title span{ display: block;}
+.anonymous p{padding-top: 2em;}
+.logon .avatar{width: 44%;box-shadow: 0 0 3px rgba(0,0,0,.25);}
+.logon .profile{padding: 0.714em;text-align: left;}
+.logon .profile p{line-height: 2em;}
+.logon .profile .p{padding-left:47%;}
+.logon .profile .first{margin-top: 1.5em;}
+.logon .profile .promo{padding-top: 1em;}
+.logon .profile .promo span{margin-left: 1em;}
+/*.item{text-align: center;padding-bottom: 1em;}
+.item .img img{max-width: 140px;max-height: 160px;}
+.item .title{padding: 0.8em 0;font-size: 1em;margin: 0;}
+.item p{line-height: 1.6em;}
+.item strong{font-size: 1.2em;font-family: tahoma;}
+.item .btn-box{padding: 0.5em 0;}
+.item .time{padding: 0.2em 0.3em;font-size: 1.2em;}*/
+
+.index-box{padding: 0; border-right: 0 none;border-bottom: 0 none;}
+.index-box .box-title{ margin: 0; border-right: 1px solid #e8e8e8;}
+#auction{ border-left: 1px solid #e8e8e8; border-top: 1px solid #e8e8e8;}
+.item{padding: 8% 0 0;background-color: #fff; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e2e2e2; text-align: center;}
+.item .title{font-size: 1em;margin: 0;padding: 0 2%;height: 2.5em;overflow: hidden;}
+.item .img img{max-width: 140px;max-height: 160px}
+.item .time{font:700 2em/1.5 tahoma;}
+.item .timer-basic{ color: #999}
+.item .timer-hurry{ color: #f60;}
+.item .timer-hurry2{ color: #f00;}
+.item .time span,.item .bidder span,.item .price span{padding: 0 2px;}
+.item .btn-box a{display: block;padding: 5%;font-size: 1.5em;color: #333;background-color: yellow;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);border-bottom: 1px solid #fff;}
+.item .btn-box a:hover,.item .btn-box a.hover{text-decoration: none;background-color: orange; border-bottom-color: rgba(0,0,0,.2);}
+.item .price{font-size: 1.5em;font-family: Trebuchet MS,Verdana;}
+.item .no-buy-now{ color: #ccc}
+.item .buy-price{padding: 4% 0; background-color: #f2f2f2;}
+.item .normalText{color: #666}
+.item .btn-box .startingSoon, .item .btn-box .btnSold, .item .btn-box .startingSoon:hover, .item .btn-box .btnSold:hover{background-color: #999;cursor: default;border-bottom-color:#fff;}
+
+#indexHistory .btn-box{margin-bottom: 2em}
+#indexHistory .btn-box a{background-color: #f2f2f2}
+#indexHistory .btn-box a:hover{border-bottom-color:#e8e8e8; background-color: #e8e8e8}
+
+@media screen and ( max-width: 760px ) {
+	.logon .profile p{line-height: 1.8em;}
+	.logon .profile .first ,.logon .profile .mt1 {margin-top: 0;}
+	.logon .profile p .fr,.logon .profile p .m_price{display: none;}
+}
+@media screen and ( max-width: 480px) {
+	.logon .profile p{line-height: 2em;}
+	.logon .profile .first ,.logon .profile .mt1 {margin-top: 1em;}
+	.logon .profile p .fr,.logon .profile p .m_price{display: inline;}
+
+
+}
+
+#slides {display: none}
+#slides .slidesjs-navigation {margin-top:3px;}
+#slides .slidesjs-previous {margin-right: 5px;float: left;}
+#slides .slidesjs-next {margin-right: 5px;float: left;}
+.slidesjs-pagination {margin: -30px 0 0;float: right;list-style: none;z-index: 11;position: relative;}
+.slidesjs-pagination li {float: left;margin: 0 1px;}
+.slidesjs-pagination li a {display: block;width: 30px;height: 30px;line-height: 30px;float: left;overflow: hidden;background-color: rgba(0,0,0,.5);color: #fff;text-align: center;}
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {background-color: rgba(0,0,0,.8);}
+.slidesjs-pagination li a:hover {background-color: rgba(0,0,0,.7);}
+#slides a:link,
+#slides a:hover,
+#slides a:visited,
+#slides a:active {color: #fff;text-decoration: none;}
+
+/* 所有手机  */
+@media only screen and (max-width: 768px) {
+	.anonymous p { padding-top: 1em;}
+}
+@media screen and ( max-width: 640px) {
+	.anonymous p{ display: inline-block;padding-top: 0;vertical-align: middle;}
+	.anonymous .anon-title { padding:2em 0;}
+	.anonymous .anon-title span{ display: inline-block;margin-right: 1em;}
+	.anonymous .btn{font-size: 1em;}
+	#auction .p-g25, #indexHistory .p-g25{width: 50%;}
+	.copyright{text-align: center;}
+	.copyright .attention-list{margin: 1em auto;}
+}
+@media screen and ( max-width: 360px) {
+	.anonymous p, .anonymous .anon-title { display: block; padding:1em 0;}
+	.box .box-title{padding: 0;}
+}
+
+
+

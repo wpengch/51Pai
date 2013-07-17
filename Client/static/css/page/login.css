@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* 
+	@name: login
+	@description:
+	@author:neikvon@hotmail.com
+*/
+@import url(../public/base.css);
+@import url(../form/form.css);
+@import url(../form/gray-theme.css);
+@import url(../theme/light/main.css);
+@import url(../public/layout.css);
+@import url(../public/typography.css);
+
+.login-box > header{margin-bottom: 20px}
+
+.login-form .third-party button {width: 100%;margin-bottom: .9em;text-align: left;}
+.login-form .third-party .qq{ background-color: #458fce;}
+.login-form .third-party .sina{ background-color: #ff8500}
+.login-form form{margin-left: 5%;padding-left: 5%;border-left: 1px dotted #ccc}
+.login-form form p{margin-bottom: 1em}
+.login-form form label{ display:block; width: 100%;cursor: pointer;line-height: 1.8;}
+.login-form form .rememberme{display: inline;margin-left: 1em}
+.login-form form input[type="text"],.login-form form input[type="password"]{ width: 100%;border: 0;border-bottom: 1px solid #e8e8e8; background-color: transparent;padding:.8em .5em;}
+.login-form form input:focus{ background-color: #f1f1f1;}
+.login-form form .btn-box{text-align: right;}
+.login-box .form-ft{ background-color: #fff;padding: 2em;text-align: center;margin-top: 2em}

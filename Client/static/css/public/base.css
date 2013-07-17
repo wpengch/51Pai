@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* 
+	@name: base
+	@description: reset and global style
+	@author:neikvon@hotmail.com
+*/
+/* reset */
+html{ margin:0; padding:0; border:0; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { margin:0; padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display:block; }
+body { line-height: 1.5; background:#fff;color:#000;}
+audio,canvas,video { display: inline-block; *display: inline; *zoom: 1; }
+a img{ border:0; }
+ol,ul{ list-style: none; }
+input[type="search"] { -webkit-appearance: textfield; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+.clearfix:before { content:""; display:table; }
+.clearfix:after { clear:both; content:"."; display:block; font-size:0; height:0; visibility:hidden; }
+/* grid */
+.p-grid { display:table; width:100%; table-layout:fixed; list-style-type: none; padding-left:0; padding-right:0; margin-left:0; margin-right:0; }
+.p-gl { float:left; margin: 0; }
+.p-gr { float:right; margin: 0 0 0 -5px; }
+.p-g10 { width:10%; }
+.p-g90 { width:90%; }
+.p-g15 { width:15%; }
+.p-g85 { width:85%; }
+.p-g20 { width:20%; }
+.p-g80 { width:80%; }
+.p-g40 { width:40%; }
+.p-g60 { width:60%; }
+.p-g25 { width:25%; }
+.p-g75 { width:75%; }
+.p-g33 { width:33.333%; }
+.p-g66 { width:66.666%; }
+.p-g38 { width:38.2%; }
+.p-g62 { width:61.8%; }
+.p-g50 { width:50%; }
+.p-g16 { width:16.666%;}
+
+.p-gbox { padding: 0 10px}
+.p-gbox2 { padding: 0 5px}
+.p-gbox-l { padding: 0 10px 0 0}
+.p-gbox-r { padding: 0 0 0 10px}
+/* 等高 grid */
+.equalize { overflow:hidden; }
+.equalize > [class*="p-g"] { display:table-cell; float:none; margin:0; vertical-align:top; }
+.equalize > [class*="p-g"] > [class*="p-gbox"] { padding-bottom: 10000px; margin-bottom: -10000px}
+
+

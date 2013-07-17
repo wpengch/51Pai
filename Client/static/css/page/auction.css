@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* 
+	@name: index.html
+	@description:
+	@author:neikvon@hotmail.com
+*/
+@import url(../public/base.css);
+@import url(../form/form.css);
+@import url(../form/gray-theme.css);
+@import url(../theme/light/main.css);
+@import url(../public/layout.css);
+@import url(../public/typography.css);
+
+#auction{ border-left: 1px solid #e8e8e8; border-top: 1px solid #e8e8e8;}
+/*.item{padding: 8% 0 0;background-color: #fff; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e2e2e2; text-align: center;}
+.item .title{font-size: 1em;margin: 0;padding: 0 2%;height: 2.5em;overflow: hidden;}
+.item .img img{max-width: 140px;max-height: 160px}
+.item .time{font:700 2em/1.5 tahoma;}
+.item .btn-box a{display: block;padding: 5%;font-size: 22px;color: #333;background-color: yellow;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);border-bottom: 1px solid #fff;}
+.item .btn-box a:hover,.item .btn-box a.hover{text-decoration: none;background-color: orange; border-bottom-color: rgba(0,0,0,.2);}
+.item .price{font-size: 1.5em;font-family: Trebuchet MS,Verdana;}
+.item .price2{padding: 4% 0; background-color: #f2f2f2;}*/
+
+#auction{ border-left: 1px solid #e8e8e8; border-top: 1px solid #e8e8e8;}
+.item{padding: 8% 0 0;background-color: #fff; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e2e2e2; text-align: center;}
+.item .title{font-size: 1em;margin: 0;padding: 0 2%;height: 2.5em;overflow: hidden;}
+.item .img img{max-width: 140px;max-height: 160px}
+.item .time{font:700 2em/1.5 tahoma;}
+.item .timer-basic{ color: #999}
+.item .timer-hurry{ color: #f60;}
+.item .timer-hurry2{ color: #f00;}
+.item .btn-box a{display: block;padding: 5%;font-size: 1.5em;color: #333;background-color: yellow;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);border-bottom: 1px solid #fff;}
+.item .btn-box a:hover,.item .btn-box a.hover{text-decoration: none;background-color: orange; border-bottom-color: rgba(0,0,0,.2);}
+.item .price{font-size: 1.5em;font-family: Trebuchet MS,Verdana;}
+.item .no-buy-now{ color: #ccc}
+.item .buy-price{padding: 4% 0; background-color: #f2f2f2;}
+.item .normalText{color: #666}
+.item .btn-box .startingSoon, .item .btn-box .btnSold, .item .btn-box .startingSoon:hover, .item .btn-box .btnSold:hover{background-color: #999;cursor: default;border-bottom-color:#fff;}
+
+
+.tab-box *{display: inline-block;line-height: 2em;color: #333;font-size: 2em;}
+.tab-box a{text-decoration: none;}
+.search-form{text-align: right;padding: 1em 0;}
+.txt_search{width: 30%;padding: 0.5em;margin-right: 1em;}
+
+@media only screen and (max-width: 768px) {
+	#auction .p-g20{width: 25%;}
+}
+@media screen and ( max-width: 640px) {
+	#auction .p-g20{width: 50%;}
+}
+@media screen and ( max-width: 360px) {
+
+}

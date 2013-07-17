@@ -1,0 +1,92 @@
+/* Smaller than standard 1000 (devices and browsers) */
+@media screen {
+	body {overflow-y: scroll;}
+	img { max-width: 100%; height: auto; width: auto\9; /* ie8 */ }
+	.video embed,
+	.video object,
+	.video iframe { width: 100%; height: auto; }
+	.p-wrap{max-width: 85em;margin: 0 auto;} /*max-width:1000px; 14px--72.857em   12px--83.333em*/
+	.p-wbox{padding: .417em .8333em;}
+	header .p-wbox{padding-top: 0; padding-bottom: 0;}
+	.p-gbox { padding: 0 0.714em}
+	.p-gbox2 { padding: 0 0.357em}
+	.p-gbox-l { padding: 0 0.714em 0 0}
+	.p-gbox-r { padding: 0 0 0 0.714em}
+	/*header*/
+	.header{height: 4em;}
+	.logo{height: 100%;}
+	.logo h1{margin-top: 0.4em}
+	.login-status{height: 50%;}
+	.login-status a{margin-left: 1em;}
+	.nav {height: 50%;}
+	.nav a{height: 100%;line-height: 3.4em;text-align: center;font-size: 116%;}
+	.nav a:hover{text-decoration: none}
+	body > footer{padding:5em 0;margin-top: 2em;margin-bottom: -4em; clear:both}
+	.footer{padding:0 1.8em;}
+	.footer-list dt{color: #666;line-height: 2em}
+	
+	/*social icons*/
+	i.social_gray { background:url(../../../static/img/icon/social-ico_16.png) 0 0 no-repeat; width:16px; height:16px; display:inline-block; margin:0 5px 0 0;vertical-align: top; }
+	i.sina { background-position:0 -16px; }
+	i.renren { background-position:0 -80px; }
+	i.qzone { background-position:0 -272px; }
+	i.qqt { background-position:0 -144px; }
+	i.sohu { background-position:0 -48px; }
+	i.douban { background-position:0 -208px; }
+	i.t163 { background-position:0 -112px; }
+	a:hover i.sina { background-position:0 0; }
+	a:hover i.renren { background-position:0 -64px; }
+	a:hover i.qzone { background-position:0 -256px; }
+	a:hover i.qqt { background-position:0 -128px; }
+	a:hover i.sohu { background-position:0 -32px; }
+	a:hover i.douban { background-position:0 -192px; }
+	a:hover i.t163 { background-position:0 -96px; }
+}
+/* reset fallback values in modern browsers */
+@media screen and ( min-width: 0px ) {
+	body > header,body > section,body > footer { min-width: 0;}
+}
+@media screen and ( max-width: 768px ) {
+	.linearize-1,
+	.linearize-1 > [class*="p-g"]{display: block;float: none;padding: 0;margin: 0;width: 100% !important;}
+	.linearize-1 > [class*="p-g"] > [class*="p-gbox"]{overflow: hidden;padding: 0;margin: 0;}
+}
+@media screen and ( max-width: 640px) {
+	.linearize-2,
+	.linearize-2 > [class*="p-g"]{display: block;float: none;padding: 0;margin: 0;width: 100% !important;}
+	.linearize-2 > [class*="p-g"] > [class*="p-gbox"]{overflow: hidden;padding: 0;margin: 0;}
+
+	.header .nav{clear: both;width:100%;}
+}
+@media screen and ( max-width: 480px) {
+	.linearize-3,
+	.linearize-3 > [class*="p-g"]{display: block;float: none;padding: 0;margin: 0;width: 100% !important;}
+	.linearize-3 > [class*="p-g"] > [class*="p-gbox"]{overflow: hidden;padding: 0;margin: 0;}
+
+	.header{height: auto;}
+	.nav a{line-height: 2.4em;}
+	.box .box-title {margin: 0.714em -0.714em 0.714em;padding: 0 0.714em 0.714em 1.2em;}
+}
+@media screen and ( max-width: 360px) {
+	.linearize-4,
+	.linearize-4 > [class*="p-g"]{display: block;float: none;padding: 0;margin: 0;width: 100% !important;}
+	.linearize-4 > [class*="p-g"] > [class*="p-gbox"]{overflow: hidden;padding: 0;margin: 0;}
+
+	.nav a{line-height: 3.4em;border-radius: 0;}
+}
+
+/* 平板竖屏 1000 */
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+
+}
+
+/* 手机横屏 or 平板竖屏  */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+	
+}
+
+

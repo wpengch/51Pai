@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>正在热拍</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://cdn.51paiba.com/static/css/page/auction.css">
+		<!--[if lt IE 9]>
+		<script src="http://cdn.51paiba.com/static/js/public/html5.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/public/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header></header>
+		<section>
+			<div class="p-wrap">
+				<div class="p-wbox">
+					<div class="">
+						<div class="fl tab-box">
+							<a href="javascript:;" class="active">正在竞拍</a>
+							<span>|</span>
+							<a href="javascript:;">即将开始</a>
+						</div>
+						<div class="search-form">
+							<input type="text" name="" id=""class="txt_search"><a href="javascript:;" class="btn blue large">搜索</a>
+						</div>
+					</div>
+					<div id="auction" class="p-grid linearize-4">
+						
+						<!-- auction item placeholder -->
+						
+					</div>
+					<div class="pager">
+						<a href="###">1</a>
+						<a href="###">2</a>
+						<a href="###">3</a>
+						<a href="###">4</a>
+						<a href="###">5</a>
+						<a href="###">6</a>
+						<a href="###">7</a>
+						<a href="###">...</a>
+						<a href="###">100</a>
+						<a href="###">上一页</a>
+						<a href="###">下一页</a>
+						<a href="###">最后一页</a>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+
+		<!-- tpl -->
+	    <!-- <script id="auction-auction-tpl" type="text/template">
+	        {@each list as it,index}
+	        	<div class="p-g20 p-gl">
+					<div class="item" id="${it.productId}">
+						<h2 class="title"><a href="javascript:;">${it.productName}</a></h2>
+		 				<p class="img"><a href="javascript:;"><img src="${it.productImg}" alt="${it.productName}"></a></p>
+		 				<p class="price"><strong>¥<span class="price-now">${it.price2}</span></strong></p>
+		 				<p class="user">${it.lastUser}</p>
+		 				<p class="time">${it.timeleft}</p>
+		 				<p class="btn-box"><a href="javascript:;" class="btnBid">马上出价</a></p>
+		 				<p class="price2">市场价：<del>¥${it.price}元</del></p>
+	 				</div>
+	 			</div>
+	        {@/each}
+		</script> -->
+		<script id="auctionTpl" type="text/template">
+	        {@each list as it,index}
+	        	<div class="p-g20 p-gl">
+					<div class="item" id="auction_${it.id}" rel="${it.timeLeft}" data-buy="${it.buyPrice}">
+						<h2 class="title"><a href="javascript:;">${it.auctionName}</a></h2>
+		 				<p class="img"><a href="javascript:;"><img src="${it.auctionImg}" alt="${it.auctionName}"></a></p>
+		 				<p id="price_${it.id}" class="price j_time">${it.price}</p>
+		 				
+		 				{@if it.status == 1}
+		 					<p id="bidder_${it.id}" class="bidder j_time">${it.bidder}</p>
+					        <p id="time_${it.id}" class="time j_time">${it.timeLeft}</p>
+		 					<p class="btn-box"><a id="btnBid_${it.id}" href="javascript:;" class="btnBid">马上出价</a></p>
+		 				{@/if}
+					    {@if it.status == 0}
+					    	<p id="bidder_${it.id}" class="winner">${it.bidder}</p>
+					        <p class="time">恭喜</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="btnSold">售出</a></p>
+		 				{@/if}
+					    {@if it.status == 2}
+					    	<p><br></p>
+					        <p class="time">即将开始</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="startingSoon">即将开始</a></p>
+					    {@/if}
+					    {@if it.status == 3}
+					    	<p><br></p>
+					        <p class="time">已关闭</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="startingSoon">已关闭</a></p>
+					    {@/if}
+					    {@if it.status == 4}
+					    	<p><br></p>
+					        <p class="time">已暂停</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="startingSoon">已暂停</a></p>
+					    {@/if}
+
+		 				<p id="buyPrice_${it.id}" class="buy-price">市场价：<del>¥${it.buyPrice}元</del></p>
+	 				</div>
+	 			</div>
+	        {@/each}
+		</script>
+		<!-- end tpl -->
+
+		<script src="http://cdn.51paiba.com/static/js/public/jquery-1.9.1.min.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/public/juicer-min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/global.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/operater.js"></script>
+	</body>
+</html>

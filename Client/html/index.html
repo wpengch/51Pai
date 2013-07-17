@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://cdn.51paiba.com/static/css/page/index.css">
+		<!--[if lt IE 9]>
+		<script src="http://cdn.51paiba.com/static/js/public/html5.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/public/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header></header>
+		<section>
+			<div class="p-wrap">
+				<div class="p-wbox">
+					<div class="p-grid equalize linearize-2 top-banner">
+						<div class="p-g75 p-gl">
+							
+							<div id="slides">
+								<a href="###"><img src="http://cdn.51paiba.com/static/img/index/slide-1.jpg" alt=""></a>
+								<a href="faq.html"><img src="http://cdn.51paiba.com/static/img/index/slide-2.jpg" alt=""></a>
+								<a href="###"><img src="http://cdn.51paiba.com/static/img/index/slide-3.jpg" alt=""></a>
+							</div>
+
+						</div>
+						<div class="p-g25 p-gr anonymous">
+							<p class="anon-title"><span>现在登陆拍吧</span><span>马上获得50积分哦！</span></p>
+							<p><a href="###" class="btn green large">QQ&nbsp;&nbsp;帐号登陆</a></p>
+							<p><a href="###" class="btn green large">新浪微博登陆</a></p>
+						</div>
+						<!-- <div class="p-g25 p-gr logon">
+							<div class="profile">
+								<img class="avatar fl" src="http://cdn.51paiba.com/static/img/user/man.gif" alt="">
+								<p class="p first"><span>pmben</span></p>
+								<p class="p">积分：3243<a href="###" class="fr">获得</a></p>	
+								<p class="p">金币：433<a href="###" class="fr">获得</a></p>
+								<p class="p ta3 mt1"><a href="###" class="btn orange large">我的拍吧</a></p>	
+								<div class="promo clear">
+									<p>拍吧为您推荐的竞拍：</p>
+									<p>商品标题商品<span class="m_price">市价：3232元</span><a href="###" class="fr">>>参加</a></p>
+									<p>商品标题商品<span class="m_price">市价：3232元</span><a href="###" class="fr">>>参加</a></p>
+									<p>商品标题商品<span class="m_price">市价：3232元</span><a href="###" class="fr">>>参加</a></p>
+									<p>商品标题商品<span class="m_price">市价：3232元</span><a href="###" class="fr">>>参加</a></p>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="p-wrap">
+				<div class="p-wbox">
+					<div id="connect_status"></div>
+					<div id="auction" class="p-grid linearize-4 box index-box">
+						<h4 class="box-title">正在热拍中</h4>
+
+						<!-- auction item placeholder -->
+
+					</div>
+				</div>
+			</div>
+			<div class="p-wrap">
+				<div class="p-wbox">
+					<div id="indexHistory" class="p-grid linearize-4 box index-box">
+						<h4 class="box-title">最近成交</h4>
+						
+						<!-- history item placeholder -->
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+
+		<!-- tpl -->
+		<!-- <script id="auction-auction-tpl" type="text/template">
+	        {@each list as it,index}
+	        	<div class="p-g25 p-gl">
+					<div class="item" id="${it.productId}">
+						<h2 class="title"><a href="javascript:;">${it.productName}</a></h2>
+		 				<p class="img"><a href="javascript:;"><img src="${it.productImg}" alt="${it.productName}"></a></p>
+		 				<p class="price"><strong>¥<span class="price-now">${it.price2}</span></strong></p>
+		 				<p class="user">${it.lastUser}</p>
+		 				<p class="time">${it.timeleft}</p>
+		 				<p class="btn-box"><a href="javascript:;" class="btnBid">马上出价</a></p>
+		 				<p class="price2">市场价：<del>¥${it.price}元</del></p>
+	 				</div>
+	 			</div>
+	        {@/each}
+		</script> -->
+
+		<script id="auctionTpl" type="text/template">
+	        {@each list as it,index}
+	        	<div class="p-g25 p-gl">
+					<div class="item" id="auction_${it.id}" rel="${it.timeLeft}" data-buy="${it.buyPrice}">
+						<h2 class="title"><a href="javascript:;">${it.auctionName}</a></h2>
+		 				<p class="img"><a href="javascript:;"><img src="${it.auctionImg}" alt="${it.auctionName}"></a></p>
+		 				<p class="price"><span id="price_${it.id}" class="j_time">¥${it.price}</span></p>
+		 				
+		 				{@if it.status == 1}
+		 					<p class="bidder"><span id="bidder_${it.id}" class="j_time">${it.bidder}</span></p>
+					        <p class="time"><span id="time_${it.id}" class="j_time">${it.timeLeft}</span></p>
+		 					<p class="btn-box"><a id="btnBid_${it.id}" href="javascript:;" class="btnBid">马上出价</a></p>
+		 				{@/if}
+					    {@if it.status == 0}
+					    	<p id="bidder_${it.id}" class="winner">${it.bidder}</p>
+					        <p class="time">恭喜</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="btnSold">售出</a></p>
+		 				{@/if}
+					    {@if it.status == 2}
+					    	<p><br></p>
+					        <p class="time">即将开始</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="startingSoon">即将开始</a></p>
+					    {@/if}
+					    {@if it.status == 3}
+					    	<p><br></p>
+					        <p class="time">已关闭</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="startingSoon">已关闭</a></p>
+					    {@/if}
+					    {@if it.status == 4}
+					    	<p><br></p>
+					        <p class="time">已暂停</p>
+		 					<p class="btn-box"><a id="btnBuy_${it.id}" href="javascript:;" class="startingSoon">已暂停</a></p>
+					    {@/if}
+
+		 				<p id="buyPrice_${it.id}" class="buy-price">市场价：<del>¥${it.buyPrice}元</del></p>
+	 				</div>
+	 			</div>
+	        {@/each}
+		</script>
+
+
+		<script id="index-history-tpl" type="text/template">
+	        {@each list as it,index}
+	        	<div class="p-g25 p-gl">
+					<div class="item" id="${it.productId}" >
+						<h2 class="title"><a href="item.html">${it.productName}</a></h2>
+		 				<p class="img"><a href="item.html"><img src="${it.productImg}" alt="${it.productName}"></a></p>
+						<p class="price">¥${it.price}元</p>
+						<p class="user">获得者：${it.lastUser}</p>
+						<p class="btn-box"><a href="javascript:;" class="btnBuy">竞拍结束，我要购买</a></p>
+	 				</div>
+	 			</div>
+	        {@/each}
+		</script>
+
+		<script src="http://cdn.51paiba.com/static/js/public/jquery-1.9.1.min.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/public/juicer-min.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/plugins/jquery.slides.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		
+		<script src="http://cdn.51paiba.com/static/js/global.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/index.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/operater.js"></script>
+	</body>
+</html>

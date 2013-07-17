@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>获得积分</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://cdn.51paiba.com/static/js/plugins/alertify/alertify.core.css">
+		<link rel="stylesheet" href="http://cdn.51paiba.com/static/js/plugins/alertify/alertify.default.css">
+		<link rel="stylesheet" href="http://cdn.51paiba.com/static/css/page/integral.css">
+		<!--[if lt IE 9]>
+		<script src="http://cdn.51paiba.com/static/js/public/html5.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/public/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header></header>
+		<section>
+			<div class="p-wrap">
+				<div class="p-wbox">
+					<div class="banner">
+						
+					</div>
+					<div class="p-grid">
+						<div class="p-g20 p-gl">
+							<nav class="item-nav">
+								<a href="javascript:;">积分介绍</a>
+								<a href="javascript:;">签到获得</a>
+								<a href="javascript:;">完成任务</a>
+								<a href="javascript:;">邀请好友</a>
+								<a href="javascript:;">其他方式</a>
+							</nav>
+						</div>
+						<div class="p-g80 p-gr">
+							<h3>积分介绍：</h3>
+							<p>通过完成任务获得的积分，可以兑换一定的拍币，拍币可以用来竞拍商品！<span class="highlight">100个积分兑换1个拍币！</span></p>
+							<p>我的积分：<span>3284</span>个 积分兑换拍币：<input type="text" name="" id="" class="txt">颗拍币<a href="javascript:;" class="btn orange large">兑换</a></p>
+
+							<h3>获得积分：</h3>
+							<ul class="task-list">
+								<li class="title">
+									<span>任务</span>
+									<span>可获得积分</span>
+									<span>完成状态</span>
+								</li>
+								<li>
+									<span>每日签到 </span>
+									<span>10个/天</span>
+									<span><a id="btn-sign-in" href="javascript:;">签到</a><em>已签到</em></span>
+								</li>
+								<li>
+									<span>注册 </span>
+									<span>20个</span>
+									<span><a href="javascript:;">注册</a><em>已注册</em></span>
+								</li>
+								<li>
+									<span>完善资料 </span>
+									<span>30个</span>
+									<span><a href="javascript:;">完善资料</a><em>已完善</em></span>
+								</li>
+								<li>
+									<span>验证手机 </span>
+									<span>50个</span>
+									<span><a id="btn-verify-mobile" href="javascript:;">验证手机</a><em>已验证</em></span>
+								</li>
+								<li>
+									<span>验证邮箱 </span>
+									<span>40个</span>
+									<span><a id="btn-verify-email" href="javascript:;">验证邮箱</a><em>已验证</em></span>
+								</li>
+								<li>
+									<span>上传头像 </span>
+									<span>20个</span>
+									<span><a href="javascript:;">上传头像</a><em>已上传</em></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+
+		<!-- 弹层 -->
+		<div class="tip_integral notif notif-white">
+
+			<p>恭喜！签到成功！<br>获得<span class="highlight">10</span>个积分</p>
+
+			<p>您的积分不够！</p>
+
+			<p>恭喜！兑换成功！</p>
+
+			<p>恭喜！验证成功！<br>获得<span class="highlight">50</span>个积分</p>
+
+		</div>
+		
+		<!-- 弹层:验证手机 -->	
+		<div id="popVerifyPhone">
+			<div class="pop_verify_phone">	
+				<label for="txtPhoneNum">手机号码：</label>
+				<p>
+					<input type="text" name="" id="txtPhoneNum" class="txt" placeholder="填写您的手机号码">
+					<span class="error">您输入的手机号码已存在！</span>
+				</p>
+				<p>
+					<a href="javascript:;" class="btn green">获取验证码</a><a href="javascript:;">重新发送验证码</a>
+				</p>
+				<label for="txtPhoneNum">验证码：</label>
+				<p>
+					<input type="text" name="" id="txtVerifyCode" class="txt" placeholder="填写您收到的验证码">
+					<span class="error">验证失败，请重新输入验证码</span>
+				</p>
+				<p>
+					<a href="javascript:;" class="btn green">马上验证</a>
+				</p>
+
+				<a href="javascript:;" class="close">关闭</a>
+			</div>
+		</div>
+
+		<!-- 弹层:验证邮箱 -->	
+		<div id="popVerifyEmail">
+			<div class="pop_verify_email">
+				<p>
+					<label for="txtEmailAddress">邮箱地址：</label>
+					<input type="text" name="" id="txtEmailAddress" class="txt" placeholder="填写您的邮箱地址">
+					<span class="error">您输入的邮箱地址不正确！</span>
+				</p>
+				<p>
+					系统将向该邮箱发送一封验证激活邮件，请查收邮件，进行验证激活。 如果没有收到验证邮件，你可以更换一个邮箱，或者重新发送验证邮件。
+				</p>
+				<p class="ta2">
+					<a href="javascript:;" class="btn green">发送验证邮件</a>
+				</p>
+				<a href="javascript:;" class="close">关闭</a>
+			</div>
+		</div>
+
+		<div class="pop_email_sent" id="popEmailSent">
+			<p>√</p>
+			<p>
+				邮件已经发送，可能需要几分钟才能收到邮件！如果您在收件箱中没有看到邮件，请查看是否在垃圾邮件里面。
+			</p>
+			<a href="javascript:;" class="close">关闭</a>
+		</div>
+		
+
+		<script src="http://cdn.51paiba.com/static/js/public/jquery-1.9.1.min.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/plugins/alertify/alertify.min.js"></script>
+		<script src="http://cdn.51paiba.com/static/js/global.js"></script>
+		<script>
+			$(function(){
+				//签到
+				$('#btn-sign-in').click(function(){
+					alertify.success('恭喜！签到成功！<br>获得<span class="highlight">10</span>个积分');
+					// alertify.error('您的积分不够！');
+					return false;
+				});
+				//验证手机
+				$('#btn-verify-mobile').click(function(){
+					alertify.alert($('#popVerifyPhone').html());
+					
+					//alertify.success('恭喜！验证成功！<br>获得<span class="highlight">50</span>个积分');
+				}); 
+				//验证邮箱
+				$('#btn-verify-email').click(function(){
+					alertify.alert($('#popVerifyEmail').html());
+					
+					//alertify.success('恭喜！验证成功！<br>获得<span class="highlight">50</span>个积分');
+				}); 
+			})
+		</script>
+
+	</body>
+</html>

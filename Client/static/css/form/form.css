@@ -1,0 +1,40 @@
+.p-form,
+.p-form fieldset { overflow:hidden; }
+.p-form div { position:relative; }
+.p-form label,
+.p-form .p-message { position:relative; display:block; /* important for Safari */}
+.p-form .p-fbox-check label { display:inline; }
+.p-form input,
+.p-form textarea { cursor:text; }
+.p-form input[type="checkbox"],
+.p-form input[type="radio"],
+.p-form select,
+.p-form label { cursor:pointer; }
+/* small adjustments for Internet Explorer - all versions */
+.p-form textarea { overflow: auto; }
+/* Hiding of hidden fields (otherwise ugly spaces in Firefox) | Versteckte Felder wirklich verstecken (sonst ggf. häßliche Lücken im Firefox) */
+.p-form input[type=hidden] { display:none !important; }
+/* styling containing DIV elements | Gestaltung der kapselnden DIV-Elemente */
+.p-form .p-fbox-text:before,
+.p-form .p-fbox-select:before,
+.p-form .p-fbox-check:before,
+.p-form .p-fbox-button:before { content:""; display:table; }
+.p-form .p-fbox-text:after,
+.p-form .p-fbox-select:after,
+.p-form .p-fbox-check:after,
+.p-form .p-fbox-button:after { clear:both; content:"."; display:block; font-size:0; height:0; visibility:hidden; }
+/* styling standard form elements with 'almost' equal flexible width | Gestaltung der einzelnen Formularelemente mit annähend gleicher Breite */
+.p-form select,
+.p-form input,
+.p-form textarea { display:block; position:relative; width:58.5%; }
+.p-form .p-fbox-check input { display: inline; width: auto; }
+/* Styling of buttons | Gestaltung von Buttons */
+.p-form .p-fbox-button input { display: inline; overflow:visible; /* Fixes IE7 auto-padding bug */width:auto; }
+/* avoid jumping checkboxes & radiobuttons in IE8 */
+.p-form .p-fbox-check input:focus,
+.p-form .p-fbox-check input:hover,
+.p-form .p-fbox-check input:active { border:0 none; }
+/* Indent Checkbox fields to match label-width | Checkboxen um den gleichen Wert einrücken, wie die Breite der labels */
+.p-full .p-fbox-select select,
+.p-full .p-fbox-text input,
+.p-full .p-fbox-text textarea { width:94.2%; margin-right: -3px; }

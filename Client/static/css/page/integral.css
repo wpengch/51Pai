@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* 
+	@name: item.html
+	@description:
+	@author:neikvon@hotmail.com
+*/
+@import url(../public/base.css);
+@import url(../form/form.css);
+@import url(../form/gray-theme.css);
+@import url(../theme/light/main.css);
+@import url(../public/layout.css);
+@import url(../public/typography.css);
+
+.banner{height: 240px;background-color: #eaeaea;margin-bottom: 1em;}
+.item-nav a{display: block;padding: 2em;text-decoration: none;text-align: center;font-size: 1.2em;border-bottom: 1px dashed #ccc}
+.item-nav a:hover{background-color: #eaeaea;}
+
+.task-list li{padding: 1em}
+.task-list .title{background-color: #ccc;font-size: 1.2em}
+.task-list span{display: inline-block;width: 150px;}
+.task-list span em{font-style: normal;margin-left: 10px;color: #999}
+
+.notif::before {
+content: '';
+float: left;
+margin: -6px 14px -6px -6px;
+width: 74px;
+height: 138px;
+background: rgba(0, 0, 0, 0.1) url("http://s3.cssflow.com/snippets/31-growl-notifications/img/dribbble.png") center no-repeat;
+border-right: 1px solid rgba(17, 17, 17, 0.4);
+border-radius: 5px 0 0 5px;
+-webkit-box-shadow: 1px 0 rgba(255, 255, 255, 0.05);
+box-shadow: 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+.pop_verify_phone{width: 500px}
+.pop_verify_phone label{float: left;}
+.pop_verify_phone p{padding-left: 80px;margin-bottom: 1em;}
+.pop_verify_email{width: 500px}
+

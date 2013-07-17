@@ -1,0 +1,5 @@
+@charset "utf-8";
+#header .logo{padding: 1em 0;}
+#header nav{font-size: 0;*word-spacing:-1px;}
+#header nav a{display: inline-block;*zoom:1;font-size: 12px;letter-spacing: normal;word-spacing: normal;vertical-align:top;width:16.66666666667%;text-align:center;padding: 1em 0; background-color: #eaeaea}
+#header nav a:hover{text-decoration: none;background-color: #ccc}

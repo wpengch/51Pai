@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* 
+	@name: item.html
+	@description:
+	@author:neikvon@hotmail.com
+*/
+@import url(../public/base.css);
+@import url(../form/form.css);
+@import url(../form/gray-theme.css);
+@import url(../theme/light/main.css);
+@import url(../public/layout.css);
+@import url(../public/typography.css);
+
+.item-title{font-size: 2em;line-height: 2.5em; background-color: #666;color: #fff;margin-bottom: 1em;}
+.item-pic{width:330px;height:330px;position: relative;border: 1px solid #ccc;}
+.item-pic img{line-height: 330px; vertical-align: middle;}
+.item-start,.item-tips{position: absolute;top: 0;left: 0;background-color: rgba(0,0,0,.2);width: 100%;line-height: 2.4; text-align: center;}
+.item-tips{top:auto;bottom: 0;left: 0;color: #999;}
+.item-status{padding: 0 1em;}
+.item-status p{margin-bottom: 1em;}
+.item-status .extra{margin-top: 1em;padding: 1em 0;border-top: 1px solid #ccc;}
+.item-status .extra .gap1{padding-left: 2em;}
+.item-status .btn-box{padding-left: 5em;}
+.item-status .btn{margin-top: 1em;}
+.item-status .btn-tips{width: 60%;float: right;color: #999;}
+
+.item-status .sold{background-color: #ccc;text-align: center;line-height: 3em;}
+
+.history{height:330px;padding:0 1em;background-color: #eaeaea}
+.history h5{text-align: center;margin: 0;line-height: 2em;}
+.history .col1,.history .col2,.history .col3{display: block;float: left;line-height: 1.9;}
+.history .col1{width: 33.333%}
+.history .col2{width: 33.333%}
+.history .col3{width: 33.333%;text-align: right;}
+
+.item-info{margin-top: 1em;border: 1px solid #ccc;padding-right: 1.5em;}
+.item-info .info-title .title{width: 120px;height: 30px;line-height: 30px;background-color: #ccc;text-align: center;}
+.item-info .info-cnt{padding: 3em; }
+.item-info .info-cnt p{float: left;width: 63%;margin-right: .5em;}
+.item-info .info-cnt img{width: 330px;height: 330px;}
+
+
+
